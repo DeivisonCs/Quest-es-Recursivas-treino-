@@ -22,7 +22,7 @@ int main(){
     scanf("%d %d", &num, &exp);
 
     if(exp < 0) printf("Expoente Invalido!\n");
-    else if(exp == 1) printf("Resultado: 1\n");
+    else if(exp == 1) printf("Resultado: 1\n"); 
     else printf("Resultado: %d\n", pot(num, exp));
 
     return 0;
