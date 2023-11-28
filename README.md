@@ -1,2 +1,3 @@
-# Quest-es-Recursivas-treino-
-Atividades para treino de recursividade
+# Questões de Recursividade
+
+Questões para treino de recursividade em C
