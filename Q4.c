@@ -5,17 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 20
+#define MAX 10
 
-void array_sum(int array[], int limit){
+int array_sum(int array[], int index){
 
-    if(limit > MAX/2){
-        int aux = array[MAX-limit];
-        array[MAX-limit] = array[limit-1];
-        array[limit-1] = aux;
+    if(index > 0) return array_sum(array, index-1) + array[index];
 
-        array_sum(array, limit-1); 
-    }
+    return array[index];
 }
 
 void show_array(int array[]){
@@ -31,13 +27,10 @@ int main(){
     for(int i=0; i<MAX; i++) 
         vet[i] = rand() %100;
     
-    printf("Antes:\n");
+    printf("Vetor:\n");
     show_array(vet);
 
-    array_sum(vet, MAX);
-
-    printf("Depois:\n");
-    show_array(vet);
+    printf("Soma: %d\n", array_sum(vet, MAX-1));
     
     return EXIT_SUCCESS;
 }
